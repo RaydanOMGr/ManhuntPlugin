@@ -1,0 +1,45 @@
+# Path: langs/en_us.yml
+# Language code: en_us
+# Language name: English (English)
+# Language country: United States (United States)
+
+track_compass_name: "&rTrack Compass"
+track_compass_cant_use: "&cYou can't use the compass yet!"
+track_compass_cooldown: "&cYou can use the compass again in %seconds% seconds!"
+
+players: "Players"
+
+no_permission: "&cYou don't have permission to do that!"
+
+specify_team: "&cPlease specify a team!"
+specify_player: "&cPlease specify a player!"
+player_not_online: "&cThe player %player% is not online!"
+
+player_already_hunter: "&cThe player %player% is already a hunter!"
+player_already_runner: "&cThe player %player% is already a runner!"
+player_now_hunter: "&bThe player %player% is now a hunter!"
+player_now_runner: "&bThe player %player% is now a runner!"
+
+you_now_hunter: "&bYou are now a hunter!"
+you_now_runner: "&bYou are now a runner!"
+
+player_not_hunter: "&cThe player %player% is not a hunter!"
+player_not_runner: "&cThe player %player% is not a runner!"
+
+specify_valid_team: "&cPlease specify a valid team!"
+
+no_longer_hunter: "&cYou are no longer a hunter!"
+no_longer_runner: "&cYou are no longer a runner!"
+
+player_no_longer_hunter: "&cThe player %player% is no longer a hunter!"
+player_no_longer_runner: "&cThe player %player% is no longer a runner!"
+
+no_hunters: "&cThere are no hunters!"
+no_runners: "&cThere are no runners!"
+
+game_started: "&bThe game has started!"
+
+you_are_hunter: "&bYou are a hunter!"
+you_are_runner: "&bYou are a runner!"
+
+reloaded: "&bThe plugin has been reloaded!"

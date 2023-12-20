@@ -1,0 +1,23 @@
+name: ManhuntPlugin
+version: '${project.version}'
+main: me.andreasmelone.manhuntplugin.ManhuntPlugin
+api-version: '1.16'
+commands:
+    manhunt:
+        name: manhunt
+        description: Manhunt command
+        usage: /manhunt <add | remove | start> <player>
+
+permissions:
+    manhunt.add:
+        description: Add a player to the manhunt
+        default: op
+    manhunt.remove:
+        description: Remove a player from the manhunt
+        default: op
+    manhunt.start:
+        description: Start the manhunt
+        default: op
+    manhunt.reload:
+        description: Reload the plugin
+        default: op

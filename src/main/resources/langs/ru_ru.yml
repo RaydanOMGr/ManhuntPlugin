@@ -1,0 +1,44 @@
+# Path: langs/ru_ru.yml
+# Language code: ru_ru
+# Language name: Russian (Русский)
+# Language country: Russia (Россия)
+
+track_compass_name: "&rОтслеживающий компас"
+track_compass_cant_use: "&cТы ещё не можешь использовать компас!"
+track_compass_cooldown: "&cТы можешь использовать компас снова через %seconds% секунд!"
+players: "Игроки"
+
+no_permission: "&cВы не имеете права делать это!"
+
+specify_team: "&cПожалуйста, укажите команду!"
+specify_player: "&cПожалуйста, укажите игрока!"
+player_not_online: "&cИгрок %player% не в сети!"
+
+player_already_hunter: "&cИгрок %player% уже является охотником!"
+player_already_runner: "&cИгрок %player% уже является раннером!"
+player_now_hunter: "&bИгрок %player% теперь охотник!"
+player_now_runner: "&bИгрок %player% теперь раннер!"
+
+you_now_hunter: "&bВы теперь охотник!"
+you_now_runner: "&bВы теперь раннер!"
+
+player_not_hunter: "&cИгрок %player% не является охотником!"
+player_not_runner: "&cИгрок %player% не является раннером!"
+
+specify_valid_team: "&cПожалуйста, укажите действительную команду!"
+
+no_longer_hunter: "&cВы больше не охотник!"
+no_longer_runner: "&cВы больше не раннер!"
+
+player_no_longer_hunter: "&cИгрок %player% больше не охотник!"
+player_no_longer_runner: "&cИгрок %player% больше не раннер!"
+
+no_hunters: "&cВ игре нет охотников!"
+no_runners: "&cВ игре нет раннеров!"
+
+game_started: "&bИгра началась!"
+
+you_are_hunter: "&bВы охотник!"
+you_are_runner: "&bВы раннер!"
+
+reloaded: "&bПлагин был перезагружен!"
