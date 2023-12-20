@@ -1,0 +1,45 @@
+# Path: langs/de_de.yml
+# Language code: de_de
+# Language name: German (Deutsch)
+# Language country: Germany (Deutschland)
+
+track_compass_name: "&rVerfolgungskompass"
+track_compass_cant_use: "&cDu kannst den Kompass noch nicht benutzen!"
+track_compass_cooldown: "&cDu kannst den Kompass in %seconds% Sekunden wieder benutzen!"
+
+players: "Spieler"
+
+no_permission: "&cDu hast keine Berechtigung, das zu tun!"
+
+specify_team: "&cBitte gib ein Team an!"
+specify_player: "&cBitte gib einen Spieler an!"
+player_not_online: "&cDer Spieler %player% ist nicht online!"
+
+player_already_hunter: "&cDer Spieler %player% ist bereits ein Jäger!"
+player_already_runner: "&cDer Spieler %player% ist bereits ein Runner!"
+player_now_hunter: "&bDer Spieler %player% ist nun ein Jäger!"
+player_now_runner: "&bDer Spieler %player% ist nun ein Runner!"
+
+you_now_hunter: "&bDu bist nun ein Jäger!"
+you_now_runner: "&bDu bist nun ein Runner!"
+
+player_not_hunter: "&cDer Spieler %player% ist kein Jäger!"
+player_not_runner: "&cDer Spieler %player% ist kein Runner!"
+
+specify_valid_team: "&cBitte gib ein gültiges Team an!"
+
+no_longer_hunter: "&cDu bist kein Jäger mehr!"
+no_longer_runner: "&cDu bist kein Runner mehr!"
+
+player_no_longer_hunter: "&cDer Spieler %player% ist kein Jäger mehr!"
+player_no_longer_runner: "&cDer Spieler %player% ist kein Runner mehr!"
+
+no_hunters: "&cEs gibt keine Jäger!"
+no_runners: "&cEs gibt keine Runner!"
+
+game_started: "&bDas Spiel hat begonnen!"
+
+you_are_hunter: "&bDu bist ein Jäger!"
+you_are_runner: "&bDu bist ein Runner!"
+
+reloaded: "&bDieses Plugin wurde neu geladen!"

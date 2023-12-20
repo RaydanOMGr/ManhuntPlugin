@@ -7,7 +7,7 @@ import org.bukkit.configuration.file.YamlConfiguration;
 import java.io.File;
 
 public class I18n {
-    private ManhuntPlugin plugin;
+    private final ManhuntPlugin plugin;
     public I18n(ManhuntPlugin plugin) {
         this.plugin = plugin;
     }
@@ -36,6 +36,14 @@ public class I18n {
         }
 
         return langFile.getString(key);
+    }
+
+    public String get(String key, TranslationKey... keys) {
+        String value = get(key);
+        for(TranslationKey translationKey : keys) {
+            value = value.replaceAll(translationKey.key(), translationKey.value());
+        }
+        return value;
     }
 
     public void setLanguage(String language) {

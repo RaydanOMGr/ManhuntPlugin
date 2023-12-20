@@ -18,7 +18,7 @@ When the hunt starts, everybody is given full saturation, food level and health.
 Currently, there is only one field in the config file.<br>
 - `language`:
   - Takes a language code as a string, if the language exists in the langs/ directory in the plugins config directory or is present in the plugins jar, it will take translations from there, otherwise it will automatically take translations from `en_us`<br>
-  - Current translations: `en_us`: English (United States), `ru_ru`: Russian (Russia), `ru_pr`: Pre-reform russian (Russian Empire)
+  - Current translations: `en_us`: English (United States), `ru_ru`: Russian (Russia), `ru_pr`: Pre-reform russian (Russian Empire). `de_de`: German (Germany)
 
 ## Permissions
 - `manhunt.add`: Add players to the list of hunters/runners

@@ -32,4 +32,11 @@ public class Util {
         return list; // Return the list
     }
 
+    public static List<String> getListWithArgument(List<String> stringList, String argument) {
+        List<String> list = new ArrayList<>(); // Create a new list
+        for(String string : stringList) { // Loop through all strings in the list
+            if(argument == null || string.toLowerCase().startsWith(argument.toLowerCase())) list.add(string); // If the argument is null or the string starts with the argument, add the string to the list
+        }
+        return list; // Return the list
+    }
 }
