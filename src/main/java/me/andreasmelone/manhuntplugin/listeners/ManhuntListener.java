@@ -6,6 +6,7 @@ import me.andreasmelone.manhuntplugin.util.Lists;
 import me.andreasmelone.manhuntplugin.util.TranslationKey;
 import me.andreasmelone.manhuntplugin.util.Util;
 import org.bukkit.Bukkit;
+import org.bukkit.GameMode;
 import org.bukkit.Material;
 import org.bukkit.World;
 import org.bukkit.entity.EnderDragon;
@@ -69,6 +70,9 @@ public class ManhuntListener implements Listener {
 
         if(Lists.hunterPlayers.contains(player.getUniqueId())) {
             player.getInventory().addItem(SpecialItems.TRACK_COMPASS.getItemStack());
+        }
+        if(Lists.spectatorPlayers.contains(player.getUniqueId())) {
+            player.setGameMode(GameMode.SPECTATOR);
         }
     }
 
