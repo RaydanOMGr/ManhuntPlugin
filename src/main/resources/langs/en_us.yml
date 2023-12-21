@@ -6,6 +6,17 @@
 track_compass_name: "&rTrack Compass"
 track_compass_cant_use: "&cYou can't use the compass yet!"
 track_compass_cooldown: "&cYou can use the compass again in %seconds% seconds!"
+track_compass_pointing_to: "&bYour compass is now pointing to %player%"
+
+player_distance_away: "&b%player% is %distance% blocks away"
+player_another_dimension: "&b%player% is in another dimension"
+player_blocks_high: "&b%player% is %height% blocks high"
+
+player_killed_dragon: "&b%player% killed the dragon!"
+
+hunters_can_still_kill_runners: "&bYou can still kill the runners while they haven't entered the portal!"
+
+runner_entered_portal: "&b%player% entered the portal! The runners win!"
 
 players: "Players"
 
@@ -43,3 +54,7 @@ you_are_hunter: "&bYou are a hunter!"
 you_are_runner: "&bYou are a runner!"
 
 reloaded: "&bThe plugin has been reloaded!"
+
+runner_death: "&b%player% died! They are out of the game!"
+all_runners_dead: "&bAll runners are dead! The hunters win!"
+game_lasted: "&bThe game lasted %minutes% minutes!"

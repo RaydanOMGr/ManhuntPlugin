@@ -4,7 +4,7 @@ public interface TranslationKey {
     String key();
     String value();
 
-    static TranslationKey of(String key, String value) {
+    static <T> TranslationKey of(String key, T value) {
         return new TranslationKey() {
             @Override
             public String key() {
@@ -13,7 +13,7 @@ public interface TranslationKey {
 
             @Override
             public String value() {
-                return value;
+                return String.valueOf(value);
             }
         };
     }

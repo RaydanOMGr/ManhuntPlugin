@@ -6,6 +6,17 @@
 track_compass_name: "&rVerfolgungskompass"
 track_compass_cant_use: "&cDu kannst den Kompass noch nicht benutzen!"
 track_compass_cooldown: "&cDu kannst den Kompass in %seconds% Sekunden wieder benutzen!"
+track_compass_pointing_to: "&bDein Kompass zeigt nun zu %player%"
+
+player_distance_away: "&b%player% ist %distance% Blöcke entfernt"
+player_another_dimension: "&b%player% ist in einer anderen Dimension"
+player_blocks_high: "&b%player% ist %height% Blöcke hoch"
+
+player_killed_dragon: "&b%player% hat den Drachen getötet!"
+
+hunters_can_still_kill_runners: "&bDu kannst die Runner noch töten, solange sie nicht durch das Portal gegangen sind!"
+
+runner_entered_portal: "&b%player% ist durch das Portal gegangen! Die Runner haben gewonnen!"
 
 players: "Spieler"
 
@@ -43,3 +54,7 @@ you_are_hunter: "&bDu bist ein Jäger!"
 you_are_runner: "&bDu bist ein Runner!"
 
 reloaded: "&bDieses Plugin wurde neu geladen!"
+
+runner_death: "&b%player% ist gestorben! Er ist aus dem Spiel!"
+all_runners_dead: "&bAlle Runner sind tot! Die Jäger haben gewonnen!"
+game_lasted: "&bDas Spiel dauerte %minutes% Minuten!"

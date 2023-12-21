@@ -6,6 +6,18 @@
 track_compass_name: "&rОтслеживающий компас"
 track_compass_cant_use: "&cТы ещё не можешь использовать компас!"
 track_compass_cooldown: "&cТы можешь использовать компас снова через %seconds% секунд!"
+track_compass_pointing_to: "&bТвой компас теперь указывает на %player%"
+
+player_distance_away: "&b%player% находится на расстоянии %distance% блоков от тебя"
+player_another_dimension: "&b%player% находится в другом измерении"
+player_blocks_high: "&b%player% находится на высоте %height% блоков"
+
+player_killed_dragon: "&b%player% убил дракона!"
+
+hunters_can_still_kill_runners: "&bТы всё ещё можешь убить раннеров, пока они не вошли в портал!"
+
+runner_entered_portal: "&b%player% вошёл в портал! Раннеры победили!"
+
 players: "Игроки"
 
 no_permission: "&cВы не имеете права делать это!"
@@ -42,3 +54,7 @@ you_are_hunter: "&bВы охотник!"
 you_are_runner: "&bВы раннер!"
 
 reloaded: "&bПлагин был перезагружен!"
+
+runner_death: "&b%player% умер! Он вышел из игры!"
+all_runners_dead: "&bВсе раннеры мертвы! Охотники победили!"
+game_lasted: "&bИгра длилась %minutes% минут!"

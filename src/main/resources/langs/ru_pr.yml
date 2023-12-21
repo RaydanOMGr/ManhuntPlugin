@@ -6,6 +6,17 @@
 track_compass_name: "&rОтслеживающiй компасъ"
 track_compass_cant_use: "&cТы еще не можешь использовать компасъ!"
 track_compass_cooldown: "&cТы можешь использовать компасъ снова черезъ %seconds% секундъ!"
+track_compass_pointing_to: "&bТвой компасъ теперь указываетъ на %player%"
+
+player_distance_away: "&b%player% находится на расстоянiи %distance% блоковъ отъ тебя"
+player_another_dimension: "&b%player% находится в другомъ мiре"
+player_blocks_high: "&b%player% находится на высотѣ %height% блоковъ"
+
+player_killed_dragon: "&b%player% убилъ дракона!"
+
+hunters_can_still_kill_runners: "&bТы все еще можешь убить бѣгуновъ, пока они не вошли въ порталъ!"
+
+runner_entered_portal: "&b%player% вошелъ въ порталъ! Бѣгуны побѣдили!"
 
 players: "Люди"
 
@@ -43,3 +54,7 @@ you_are_hunter: "&bВы охотникъ!"
 you_are_runner: "&bВы бѣгунъ!"
 
 reloaded: "&bДополненiе было перезагружено!"
+
+runner_death: "&b%player% умеръ! Онъ больше не въ игре!"
+all_runners_dead: "&bВсѣ бѣгуны мертвы! Охотники побѣдили!"
+game_lasted: "&bИгра длилась %minutes% минутъ!"

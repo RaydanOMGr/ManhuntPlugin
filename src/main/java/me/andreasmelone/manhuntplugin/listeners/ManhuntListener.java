@@ -3,11 +3,11 @@ package me.andreasmelone.manhuntplugin.listeners;
 import me.andreasmelone.manhuntplugin.ManhuntPlugin;
 import me.andreasmelone.manhuntplugin.items.abstracts.SpecialItems;
 import me.andreasmelone.manhuntplugin.util.Lists;
+import me.andreasmelone.manhuntplugin.util.TranslationKey;
 import me.andreasmelone.manhuntplugin.util.Util;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.World;
-import org.bukkit.block.Skull;
 import org.bukkit.entity.EnderDragon;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -21,7 +21,6 @@ import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.SkullMeta;
 
-import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 
@@ -46,17 +45,20 @@ public class ManhuntListener implements Listener {
                 }
             }
         } else if(Lists.runnerPlayers.contains(player.getUniqueId())) {
+            Lists.spectatorPlayers.add(player.getUniqueId());
             Bukkit.broadcastMessage(
-                    Util.transform("&b" + player.getDisplayName() + " died! The hunters win!")
+                    Util.transform(plugin.getI18n().get("runner_death", TranslationKey.of("%player%", player.getDisplayName())))
             );
-            Bukkit.broadcastMessage(
-                    Util.transform("&bThe game lasted " + (System.currentTimeMillis() - plugin.startTime) / 1000 / 60 + " minutes")
-            );
+            if(Lists.runnerPlayers.size() == Lists.spectatorPlayers.size()) {
+                Bukkit.broadcastMessage(
+                        Util.transform(plugin.getI18n().get("all_runners_dead"))
+                );
+                Bukkit.broadcastMessage(
+                        Util.transform(plugin.getI18n().get("game_lasted", TranslationKey.of("%minutes%", (System.currentTimeMillis() - plugin.startTime) / 1000 / 60)))
+                );
 
-            Lists.runnerPlayers.clear();
-            Lists.hunterPlayers.clear();
-
-            plugin.isRunning = false;
+                plugin.isRunning = false;
+            }
         }
     }
 
@@ -87,7 +89,7 @@ public class ManhuntListener implements Listener {
                 }
 
                 if(Lists.runnerPlayers.size() > 1) {
-                    Inventory inv = plugin.getServer().createInventory(null, 3 * 9, "Players");
+                    Inventory inv = plugin.getServer().createInventory(null, 3 * 9, plugin.getI18n().get("players"));
                     inv.setContents(
                             Lists.runnerPlayers.stream().map(uuid -> {
                                 Player target = Bukkit.getPlayer(uuid);
@@ -110,12 +112,41 @@ public class ManhuntListener implements Listener {
                     Player target = Bukkit.getPlayer(Lists.runnerPlayers.get(0));
                     if(target == null) return;
                     player.setCompassTarget(target.getLocation());
-                    player.sendMessage(Util.transform("&bYour compass is now pointing to " + target.getDisplayName()));
+                    player.sendMessage(
+                            Util.transform(
+                                    plugin.getI18n().get(
+                                            "track_compass_pointing_to",
+                                            TranslationKey.of("%player%", target.getDisplayName())
+                                    )
+                            )
+                    );
                     if(player.getWorld() == target.getWorld())
-                        player.sendMessage(Util.transform("&b" + target.getDisplayName() + " is " + (int) player.getLocation().distance(target.getLocation()) + " blocks away"));
+                        player.sendMessage(
+                                Util.transform(
+                                        plugin.getI18n().get(
+                                                "player_distance_away",
+                                                TranslationKey.of("%distance%", (int) player.getLocation().distance(target.getLocation()))
+                                        )
+                                )
+                        );
                     else
-                        player.sendMessage(Util.transform("&b" + target.getDisplayName() + " is in another dimension"));
-                    player.sendMessage(Util.transform("&b" + target.getDisplayName() + " is " + (int) target.getLocation().getY() + " blocks high"));
+                        player.sendMessage(
+                                Util.transform(
+                                        plugin.getI18n().get(
+                                                "player_another_dimension",
+                                                TranslationKey.of("%player%", target.getDisplayName())
+                                        )
+                                )
+                        );
+                    player.sendMessage(
+                            Util.transform(
+                                    plugin.getI18n().get(
+                                            "player_height",
+                                            TranslationKey.of("%player%", target.getDisplayName()),
+                                            TranslationKey.of("%height%", (int) target.getLocation().getY())
+                                    )
+                            )
+                    );
 
                     player.setCooldown(Material.COMPASS, 20 * 20);
                 }
@@ -144,12 +175,41 @@ public class ManhuntListener implements Listener {
                     Player target = Bukkit.getPlayer(skull.getOwningPlayer().getUniqueId());
                     if(target == null) return;
                     player.setCompassTarget(target.getLocation());
-                    player.sendMessage(Util.transform("&bYour compass is now pointing to " + target.getDisplayName()));
+                    player.sendMessage(
+                            Util.transform(
+                                    plugin.getI18n().get(
+                                            "track_compass_pointing_to",
+                                            TranslationKey.of("%player%", target.getDisplayName())
+                                    )
+                            )
+                    );
                     if(player.getWorld() == target.getWorld())
-                        player.sendMessage(Util.transform("&b" + target.getDisplayName() + " is " + (int) player.getLocation().distance(target.getLocation()) + " blocks away"));
+                        player.sendMessage(
+                                Util.transform(
+                                        plugin.getI18n().get(
+                                                "player_distance_away",
+                                                TranslationKey.of("%distance%", (int) player.getLocation().distance(target.getLocation()))
+                                        )
+                                )
+                        );
                     else
-                        player.sendMessage(Util.transform("&b" + target.getDisplayName() + " is in another dimension"));
-                    player.sendMessage(Util.transform("&b" + target.getDisplayName() + " is " + (int) target.getLocation().getY() + " blocks high"));
+                        player.sendMessage(
+                                Util.transform(
+                                        plugin.getI18n().get(
+                                                "player_another_dimension",
+                                                TranslationKey.of("%player%", target.getDisplayName())
+                                        )
+                                )
+                        );
+                    player.sendMessage(
+                            Util.transform(
+                                    plugin.getI18n().get(
+                                            "player_height",
+                                            TranslationKey.of("%player%", target.getDisplayName()),
+                                            TranslationKey.of("%height%", (int) target.getLocation().getY())
+                                    )
+                            )
+                    );
 
                     player.setCooldown(Material.COMPASS, 20 * 20);
                     player.closeInventory();
@@ -179,15 +239,32 @@ public class ManhuntListener implements Listener {
         Player player = event.getEntity().getKiller();
         if(event.getEntity() instanceof EnderDragon) {
                 Bukkit.broadcastMessage(
-                        Util.transform("&b" + player.getDisplayName() + " killed the dragon!")
+                        Util.transform(
+                                plugin.getI18n().get(
+                                        "player_killed_dragon",
+                                        TranslationKey.of("%player%", player.getDisplayName())
+                                )
+                        )
                 );
                 Bukkit.broadcastMessage(
-                        Util.transform("&bThe game is running " + (System.currentTimeMillis() - plugin.startTime) / 1000 / 60 + " minutes already")
+                        Util.transform(
+                                plugin.getI18n().get(
+                                        "game_lasted",
+                                        TranslationKey.of("%minutes%", (System.currentTimeMillis() - plugin.startTime) / 1000 / 60)
+                                )
+                        )
                 );
                 Lists.hunterPlayers.forEach(uuid -> {
                     Player hunter = Bukkit.getPlayer(uuid);
                     if(hunter == null) return;
-                    hunter.sendMessage(Util.transform("&bHunters, if you kill the player before they enter the portal you can still win!"));
+                    hunter.sendMessage(
+                            Util.transform(
+                                    // hunters, you still can kill the runners until they enter the portal!
+                                    plugin.getI18n().get(
+                                            "hunters_can_still_kill_runners"
+                                    )
+                            )
+                    );
                 });
         }
     }
@@ -200,14 +277,21 @@ public class ManhuntListener implements Listener {
         if(event.getFrom().getEnvironment().equals(World.Environment.THE_END)) {
             if(Lists.runnerPlayers.contains(player.getUniqueId())) {
                 Bukkit.broadcastMessage(
-                        Util.transform("&b" + player.getDisplayName() + " entered the portal! The runners win!")
+                        Util.transform(
+                                plugin.getI18n().get(
+                                        "runner_entered_portal",
+                                        TranslationKey.of("%player%", player.getDisplayName())
+                                )
+                        )
                 );
                 Bukkit.broadcastMessage(
-                        Util.transform("&bThe game lasted " + (System.currentTimeMillis() - plugin.startTime) / 1000 / 60 + " minutes")
+                        Util.transform(
+                                plugin.getI18n().get(
+                                        "game_lasted",
+                                        TranslationKey.of("%minutes%", (System.currentTimeMillis() - plugin.startTime) / 1000 / 60)
+                                )
+                        )
                 );
-
-                Lists.runnerPlayers.clear();
-                Lists.hunterPlayers.clear();
 
                 plugin.isRunning = false;
             }
